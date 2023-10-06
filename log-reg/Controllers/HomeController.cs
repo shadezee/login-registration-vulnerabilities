@@ -9,7 +9,7 @@ namespace log_reg.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly UsersContext _context;
-        public HomeController(ILogger<HomeController> logger,UsersContext context )
+        public HomeController(ILogger<HomeController> logger, UsersContext context)
         {
             _logger = logger;
             _context = context;
@@ -26,19 +26,28 @@ namespace log_reg.Controllers
         }
         public IActionResult Register()
         {
-            try{
+            try
+            {
                 _context.Database.OpenConnection();
                 return View();
             }
-            catch(Exception e){
+            catch (Exception e)
+            {
                 _logger.LogError(e, "Database connection error");
                 return View("DbStatus");
             }
         }
 
-        public IActionResult DbStatus(){
+        public IActionResult DisplayUser()
+        {
             return View();
         }
+
+        public IActionResult DbStatus()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
