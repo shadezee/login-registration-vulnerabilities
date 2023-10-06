@@ -6,7 +6,7 @@ namespace log_reg.Controllers
 {
     public class RegisterController : Controller
     {
-        public IActionResult Register(Users user_model)
+        public IActionResult RegisterUser(Users user_model)
         {
             if (ModelState.IsValid){
                 // inserting a user
@@ -20,17 +20,16 @@ namespace log_reg.Controllers
                     context.SaveChanges();
 
                     // Check if the new user record was successfully inserted into the database.
-                    if (context.SaveChanges() > 0)
-                    {
-                        // Redirect the user to the new page.
-                        return RedirectToAction("Index", "Home");
-                    }
-                    else{
-                        return RedirectToAction("DbStatus", "Home");
-                    }
+                    // if (context.SaveChanges() > 0)
+                    // {
+                        
+                    //     return RedirectToAction("DbStatus", "Home");
+                    // }
+                    // else{
+                    //     return RedirectToAction("DisplayUser", "Home");
+                    // }
                 }
-
-                return RedirectToAction("DbStatus", "Home");
+                return RedirectToAction("Index", "Home");
             }
             return View(user_model);
         }

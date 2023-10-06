@@ -1,21 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Users
+@* @{
+ViewData["Title"] = "Home Page";
 }
 
 @* <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1 class="display-4">Welcome</h1>
+<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div> *@
 
 <div class="login-form">
-    <form method="post">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <button class="log-sub-button" type="submit">Log In</button> 
+    <form asp-controller="Login" asp-action="Login" method="post">
+        <input asp-for="Username" placeholder="Username"/>
+        <input asp-for="Password" placeholder="Password"/>
+        <button class="log-sub-button" type="submit">Log In</button>
     </form>
 </div>
 
 <div class="">
-    <a href="">Forgot Passoword</a>
-    <a href="">Sign Up</a>
+    <a href="">Forgot Password</a>
+    <a asp-action="Register">Sign Up</a>
 </div>
