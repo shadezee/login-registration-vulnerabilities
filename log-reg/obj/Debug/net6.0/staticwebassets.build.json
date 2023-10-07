@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TkGF8+InGoGbbkY8ltk9pMZ434ZXk7JHkNWtInjNnyY=",
+  "Hash": "ctDlWvR6SaNd6P/15kIeBo5tcPkJpQVqcv5SuAaXc0g=",
   "Source": "log-reg",
   "BasePath": "_content/log-reg",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\wwwroot\\profile_pics\\1.png",
+      "SourceId": "log-reg",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\wwwroot\\",
+      "BasePath": "_content/log-reg",
+      "RelativePath": "profile_pics/1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_pics\\1.png"
     }
   ]
 }

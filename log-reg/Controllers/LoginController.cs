@@ -27,6 +27,10 @@ namespace log_reg.Controllers
                     Username = name
                 };
 
+                HttpContext.Session.SetString("UserId", Convert.ToString(user_id));
+                HttpContext.Session.SetString("Password", Convert.ToString(password));
+                HttpContext.Session.SetString("Username", Convert.ToString(name));
+
                 return View("~/Views/Home/DisplayUser.cshtml", viewModel);
             }
             return RedirectToAction("Index", "Home");

@@ -13,7 +13,7 @@ namespace log_reg.Models
         public string Password { get; set; }
         [Required(ErrorMessage = "Please enter contact")]
         public int Contact { get; set; }
-        [Required(ErrorMessage = "Please upload an image")]
-        public IFormFile ProfilePic { get; set; }
+        // [Required(ErrorMessage = "Please upload an image")]
+        // public IFormFile ProfilePic { get; set; }
     }
 }
