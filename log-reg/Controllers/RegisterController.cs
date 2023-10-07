@@ -12,13 +12,20 @@ namespace log_reg.Controllers
         {
             _context = context;
         }
-        public IActionResult RegisterUser(Users user_model)
+        public IActionResult RegisterUser(Users user_model, IFormFile file_upload)
         {
             if (ModelState.IsValid)
             {
-                _context.UsersObjects.Add(user_model);
-                _context.SaveChanges();
-                return RedirectToAction("Index", "Home");
+                if (file_upload != null)
+                {
+                    var email = user_model.Email;
+                    if(file_upload.Length > 0){
+                        
+                    }
+                    _context.UsersObjects.Add(user_model);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index", "Home");
+                }
             }
             return View(user_model);
         }
