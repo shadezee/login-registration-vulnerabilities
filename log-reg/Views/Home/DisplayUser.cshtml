@@ -1,20 +1,27 @@
-﻿@*
-For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    @* var user_id = HttpContext.Session.GetString("UserId"); *@
+﻿@{
+    string id_for_profile = Model.Id.ToString(); // Convert to string explicitly
+    string imageUrl = $"~/profile_pics/{id_for_profile}.jpg"; // Use string interpolation
 }
 
 <div class="user-data-display">
-    <div class="profile-picture">
+    <div class="profile-picture-form">
         <form asp-controller="ImgUpload" asp-action="Index" method="post" enctype="multipart/form-data">
             <input class="form-control" name="user_upload" type="file" />
             <button type="submit" value="Upload">Upload</button>
         </form>
-
     </div>
     <br>
     <div class="profile-data">
         Hi @Model.Username, your ID is @Model.Id
+    </div>
+    <div class="profile-picture-display">
+        @if (@Model.HasProfileImage != 0)
+        {
+            <img src="~/profile_pics/1.png" alt="Profile Picture" />
+        }
+        else
+        {
+            <p>Error in fetching image</p>
+        }
     </div>
 </div>

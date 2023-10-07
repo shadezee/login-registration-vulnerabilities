@@ -23,6 +23,7 @@ namespace log_reg.Controllers
                 var name = user.Username;
                 var viewModel = new UsersViewModel
                 {
+                    HasProfileImage= user.HasProfileImage,
                     Id = user_id,
                     Username = name
                 };

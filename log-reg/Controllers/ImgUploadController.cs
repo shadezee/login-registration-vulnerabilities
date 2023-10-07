@@ -35,10 +35,18 @@ namespace log_reg.Controllers
                     fs.Flush();
                 }
 
+                var user = _context.UsersObjects.FirstOrDefault(u => u.Id == Convert.ToInt16(HttpContext.Session.GetString("UserId")));
+                if (user.HasProfileImage == 0)
+                {
+                    user.HasProfileImage = 1;
+                    _context.SaveChanges();
+                }
                 var viewModel = new UsersViewModel
                 {
                     Id = Convert.ToInt16(HttpContext.Session.GetString("UserId")),
-                    Username = Convert.ToString(HttpContext.Session.GetString("Username"))
+                    HasProfileImage = user.HasProfileImage,
+                    Username = Convert.ToString(HttpContext.Session.GetString("Username")
+                    )
                 };
 
                 return View("~/Views/Home/DisplayUser.cshtml", viewModel);

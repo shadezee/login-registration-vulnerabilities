@@ -245,8 +245,8 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\wwwroot\\profile_pics\\1.png",
-      "PackagePath": "staticwebassets\\profile_pics\\1.png"
+      "Id": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\wwwroot\\profile_pics\\1.jpg",
+      "PackagePath": "staticwebassets\\profile_pics\\1.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.log-reg.props",
