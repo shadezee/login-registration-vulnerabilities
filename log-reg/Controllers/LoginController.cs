@@ -1,4 +1,5 @@
-﻿using log_reg.Models;
+﻿using Azure.Identity;
+using log_reg.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace log_reg.Controllers
@@ -15,17 +16,25 @@ namespace log_reg.Controllers
         {
             _context = context;
         }
+
+        [HttpPost]
         public IActionResult Login(string name, string password)
         {
-            var user = _context.UsersObjects.FirstOrDefault(u => u.Username == name);
+            // var user = _context.UsersObjects.FirstOrDefault(u => u.Username == name && u.Password == password);
+            var loginQuery = _context.UsersObjects.Where(u => u.Username == name && u.Password == password);
+
+            List<string> usernames = loginQuery.Select(u => u.Username).ToList();
+
+            var user = loginQuery.FirstOrDefault();
+
 
             if (user == null)
             {
-                return RedirectToAction("DisplayUser", "Home");
-                // if (user.Password == password)
-                // {
-                //     return View("DisplayUser", "Home");
-                // }
+                return BadRequest(usernames); ;
+                if (user.Password == password)
+                {
+                    // return View("DisplayUser", "Home");
+                }
             }
             return RedirectToAction("Index", "Home");
         }

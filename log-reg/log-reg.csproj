@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Data Access\" />
+    <Folder Include="wwwroot\profile_pics\" />
   </ItemGroup>
 
   <ItemGroup>
