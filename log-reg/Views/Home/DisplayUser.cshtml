@@ -2,6 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    @* var user_id = HttpContext.Session.GetString("UserId"); *@
 }
 
 <div class="user-data-display">
@@ -9,6 +10,6 @@
 
     </div>
     <div class="profile-data">
-        Hi name, your ID is ID.
+        Hi @Model.Username, your ID is @Model.Id
     </div>
 </div>
