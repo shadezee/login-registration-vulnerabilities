@@ -33,10 +33,13 @@ string SelectDb()
     return connection_string;
 }
 
+
 builder.Services.AddDbContext<UsersContext>(options =>
 {
     options.UseSqlServer(SelectDb());
 });
+
+var connectionString = builder.Configuration.GetConnectionString(SelectDb());
 
 var app = builder.Build();
 
