@@ -40,7 +40,7 @@ namespace log_reg.Controllers
                     return View("~/Views/Home/Alerts.cshtml");
                 }
             }
-            return View(user_model);
+            return View("Register", "Home");
         }
 
 

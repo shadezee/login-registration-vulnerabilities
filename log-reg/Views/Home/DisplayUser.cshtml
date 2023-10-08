@@ -1,8 +1,14 @@
 ﻿@{
     string id_for_profile = Model.Id.ToString(); // Convert to string explicitly
-    string imageUrl = $"~/profile_pics/{id_for_profile}.jpg"; // Use string interpolation
+    string imageUrl = $"~/profile_pics/{id_for_profile}.png"; // Use string interpolation
 }
 
+@if (TempData.ContainsKey("UploadError"))
+{
+    <div class="alert alert-danger">
+        @TempData["UploadError"]
+    </div>
+}
 <div class="user-data-display">
     <div class="profile-picture-form">
         <form asp-controller="ImgUpload" asp-action="Index" method="post" enctype="multipart/form-data">

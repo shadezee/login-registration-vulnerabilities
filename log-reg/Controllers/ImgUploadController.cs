@@ -18,6 +18,9 @@ namespace log_reg.Controllers
         public IActionResult Index(IFormFile user_upload)
         {
             Console.WriteLine("start actions");
+            var user = _context.UsersObjects.FirstOrDefault(u => u.Id == Convert.ToInt16(HttpContext.Session.GetString("UserId")));
+
+            var viewModel = new UsersViewModel { };
             if (user_upload != null)
             {
                 Console.WriteLine("Got File");
@@ -35,13 +38,12 @@ namespace log_reg.Controllers
                     fs.Flush();
                 }
 
-                var user = _context.UsersObjects.FirstOrDefault(u => u.Id == Convert.ToInt16(HttpContext.Session.GetString("UserId")));
                 if (user.HasProfileImage == 0)
                 {
                     user.HasProfileImage = 1;
                     _context.SaveChanges();
                 }
-                var viewModel = new UsersViewModel
+                viewModel = new UsersViewModel
                 {
                     Id = Convert.ToInt16(HttpContext.Session.GetString("UserId")),
                     HasProfileImage = user.HasProfileImage,
@@ -51,7 +53,15 @@ namespace log_reg.Controllers
 
                 return View("~/Views/Home/DisplayUser.cshtml", viewModel);
             }
-            return RedirectToAction("Index", "Home");
+            viewModel = new UsersViewModel
+            {
+                Id = Convert.ToInt16(HttpContext.Session.GetString("UserId")),
+                HasProfileImage = user.HasProfileImage,
+                Username = Convert.ToString(HttpContext.Session.GetString("Username"))
+            };
+
+            TempData["UploadError"] = "Please select a file to upload.";
+            return View("~/Views/Home/DisplayUser.cshtml", viewModel);
         }
     }
 }
