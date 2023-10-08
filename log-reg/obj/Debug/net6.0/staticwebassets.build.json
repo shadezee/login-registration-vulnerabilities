@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ctDlWvR6SaNd6P/15kIeBo5tcPkJpQVqcv5SuAaXc0g=",
+  "Hash": "3akQouoKfOTxKo7VbthEcXzAOLXBxkSAT4JnavtCz0k=",
   "Source": "log-reg",
   "BasePath": "_content/log-reg",
   "Mode": "Default",
@@ -1086,6 +1086,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\profile_pics\\1.png"
+    },
+    {
+      "Identity": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\wwwroot\\profile_pics\\2.jpg",
+      "SourceId": "log-reg",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\wwwroot\\",
+      "BasePath": "_content/log-reg",
+      "RelativePath": "profile_pics/2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_pics\\2.jpg"
+    },
+    {
+      "Identity": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\wwwroot\\profile_pics\\2.txt",
+      "SourceId": "log-reg",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\wwwroot\\",
+      "BasePath": "_content/log-reg",
+      "RelativePath": "profile_pics/2.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_pics\\2.txt"
     }
   ]
 }

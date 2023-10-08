@@ -23,7 +23,7 @@ namespace log_reg.Controllers
                 var name = user.Username;
                 var viewModel = new UsersViewModel
                 {
-                    HasProfileImage= user.HasProfileImage,
+                    HasProfileImage = user.HasProfileImage,
                     Id = user_id,
                     Username = name
                 };
@@ -34,6 +34,7 @@ namespace log_reg.Controllers
 
                 return View("~/Views/Home/DisplayUser.cshtml", viewModel);
             }
+            TempData["InvalidCredentials"] = "Invalid Credentials.";
             return RedirectToAction("Index", "Home");
         }
     }

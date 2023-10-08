@@ -35,15 +35,11 @@ namespace log_reg.Controllers
                 }
                 else
                 {
-                    // Set the message in ViewBag
-                    ViewBag.Message = "An account already exists for this email...";
-                    return View("~/Views/Home/Alerts.cshtml");
+                    TempData["PreExistingUserError"] = "An account has been already registered to this email.";
+                    return View("~/Views/Home/Register.cshtml");
                 }
             }
-            return View("Register", "Home");
+            return View("~/Views/Home/Register.cshtml");
         }
-
-
-
     }
 }

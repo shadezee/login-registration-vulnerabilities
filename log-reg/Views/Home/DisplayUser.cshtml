@@ -1,8 +1,7 @@
 ﻿@{
     string id_for_profile = Model.Id.ToString(); // Convert to string explicitly
-    string imageUrl = $"~/profile_pics/{id_for_profile}.png"; // Use string interpolation
+    string imageUrl = $"/profile_pics/{id_for_profile}.png";
 }
-
 @if (TempData.ContainsKey("UploadError"))
 {
     <div class="alert alert-danger">
@@ -23,7 +22,7 @@
     <div class="profile-picture-display">
         @if (@Model.HasProfileImage != 0)
         {
-            <img src=@imageUrl alt="Profile Picture" />
+            <img src=@Url.Content(@imageUrl) alt="Profile Picture" height="200px" width="200px" />
         }
         else
         {
