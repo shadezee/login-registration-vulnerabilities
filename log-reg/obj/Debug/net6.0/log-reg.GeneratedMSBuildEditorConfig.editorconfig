@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = log_reg
 build_property.RootNamespace = log_reg
-build_property.ProjectDir = d:\ProgramFilesD\DOTNET\log-reg\log-reg\
+build_property.ProjectDir = D:\ProgramFilesD\DOTNET\log-reg\log-reg\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\ProgramFilesD\DOTNET\log-reg\log-reg
+build_property.MSBuildProjectDirectory = D:\ProgramFilesD\DOTNET\log-reg\log-reg
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Alerts.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Alerts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGVydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/DbStatus.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/DbStatus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYlN0YXR1cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/DisplayUser.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/DisplayUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5VXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Index.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Privacy.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Register.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Shared/Error.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/_ViewImports.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/_ViewStart.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Shared/_Layout.cshtml]
+[D:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-d5t1lbcyjb

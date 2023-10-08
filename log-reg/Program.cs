@@ -1,16 +1,19 @@
 using log_reg.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = "shade_net";
     options.IdleTimeout = TimeSpan.FromMinutes(30);
 });
+
 
 
 string connection_string;
@@ -63,7 +66,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseCookiePolicy();
+
 app.UseSession();
+
 
 app.MapControllerRoute(
     name: "default",

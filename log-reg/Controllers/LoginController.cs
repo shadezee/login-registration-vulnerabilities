@@ -1,4 +1,5 @@
-﻿using Azure.Identity;
+﻿using System.Net;
+using Azure.Identity;
 using log_reg.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,6 +32,11 @@ namespace log_reg.Controllers
                 HttpContext.Session.SetString("UserId", Convert.ToString(user_id));
                 HttpContext.Session.SetString("Password", Convert.ToString(password));
                 HttpContext.Session.SetString("Username", Convert.ToString(name));
+
+                var net_cookie = new Cookie("UserCookie", Convert.ToString(user_id));
+                net_cookie.Expires = DateTime.UtcNow.AddDays(20);
+
+                Response.Cookies.Append(net_cookie.Name, net_cookie.Value);
 
                 return View("~/Views/Home/DisplayUser.cshtml", viewModel);
             }
