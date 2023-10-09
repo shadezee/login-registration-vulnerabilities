@@ -19,7 +19,7 @@ namespace log_reg.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Privacy()
         {
             return View();
