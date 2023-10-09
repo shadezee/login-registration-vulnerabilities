@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\log-reg.csproj": {}
+    "D:\\ProgramFilesD\\DOTNET\\VULNERABLE\\log-reg\\log-reg\\log-reg.csproj": {}
   },
   "projects": {
-    "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\log-reg.csproj": {
+    "D:\\ProgramFilesD\\DOTNET\\VULNERABLE\\log-reg\\log-reg\\log-reg.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\log-reg.csproj",
+        "projectUniqueName": "D:\\ProgramFilesD\\DOTNET\\VULNERABLE\\log-reg\\log-reg\\log-reg.csproj",
         "projectName": "log-reg",
-        "projectPath": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\log-reg.csproj",
+        "projectPath": "D:\\ProgramFilesD\\DOTNET\\VULNERABLE\\log-reg\\log-reg\\log-reg.csproj",
         "packagesPath": "C:\\Users\\shade\\.nuget\\packages\\",
-        "outputPath": "D:\\ProgramFilesD\\DOTNET\\log-reg\\log-reg\\obj\\",
+        "outputPath": "D:\\ProgramFilesD\\DOTNET\\VULNERABLE\\log-reg\\log-reg\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shade\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,10 +40,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.11, )"

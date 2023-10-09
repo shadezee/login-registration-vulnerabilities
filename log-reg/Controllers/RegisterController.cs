@@ -1,5 +1,6 @@
 ﻿using log_reg.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace log_reg.Controllers
 {

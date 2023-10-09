@@ -1,6 +1,7 @@
-﻿@{
-    string id_for_profile = Model.Id.ToString(); // Convert to string explicitly
-    string imageUrl = $"/profile_pics/{id_for_profile}.png";
+﻿@Model Users
+@{
+    @* string id_for_profile = Model.Id.ToString(); // Convert to string explicitly
+string imageUrl = $"/profile_pics/{id_for_profile}.png"; *@
 }
 @if (TempData.ContainsKey("UploadError"))
 {
@@ -17,23 +18,20 @@
     </div>
     <br>
     <div class="profile-data">
-        Hi @Model.Username, your ID is @Model.Id
-    </div>
-    <div class="profile-picture-display">
-        @if (@Model.HasProfileImage != 0)
+            Hi @Model.Username, your ID is @Model.Id and password is @Model.Password
+        @* @foreach (var user in Model)
         {
-            <img src=@Url.Content(@imageUrl) alt="Profile Picture" height="200px" width="200px" />
-        }
-        else
-        {
-            <p>Error in fetching image</p>
-        }
+            <li>Hi @Model.Username, your ID is @Model.Id and password is @Model.Password</li>
+        } *@
     </div>
-
-    <div class="user-notes">
-        <form action="">
-            <input type="text" height="5100px" width="300px">
-            <button type="submit" value="Send">Send</button>
-        </form>
-    </div>
+    @* <div class="profile-picture-display">
+    @if (@Model.HasProfileImage != 0)
+    {
+    <img src=@Url.Content(@imageUrl) alt="Profile Picture" height="200px" width="200px" />
+    }
+    else
+    {
+    <p>Error in fetching image</p>
+    }
+    </div> *@
 </div>
