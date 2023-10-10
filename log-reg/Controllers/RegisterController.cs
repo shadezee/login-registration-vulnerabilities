@@ -25,16 +25,24 @@ namespace log_reg.Controllers
         {
             if (ModelState.IsValid)
             {
-                string email = user_model.Email;
-                if (!CheckPreExisting(email))
+                if ((user_model.Password).Length >= 5)
                 {
-                    _context.UsersObjects.Add(user_model);
-                    _context.SaveChanges();
-                    return RedirectToAction("Index", "Home");
+                    string email = user_model.Email;
+                    if (!CheckPreExisting(email))
+                    {
+                        _context.UsersObjects.Add(user_model);
+                        _context.SaveChanges();
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        TempData["PreExistingUserError"] = "An account has been already registered to this email.";
+                        return View("~/Views/Home/Register.cshtml");
+                    }
                 }
                 else
                 {
-                    TempData["PreExistingUserError"] = "An account has been already registered to this email.";
+                    TempData["PasswordLimitError"] = "An account has been already registered to this email.";
                     return View("~/Views/Home/Register.cshtml");
                 }
             }

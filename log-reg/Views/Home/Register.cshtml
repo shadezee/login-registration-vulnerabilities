@@ -4,7 +4,17 @@
     <div class="alert alert-danger">
         @TempData["PreExistingUserError"]
     </div>
-}<form asp-controller="Register" asp-action="RegisterUser" method="post">
+}
+
+@if (TempData.ContainsKey("PasswordLimitError"))
+{
+    <div class="alert alert-danger">
+        @TempData["PasswordLimitError"]
+    </div>
+}
+
+
+<form asp-controller="Register" asp-action="RegisterUser" method="post">
     <div class="form-group">
         <label for="Username">Username:</label>
         <input asp-for="Username" class="form-control" placeholder="Username" />
