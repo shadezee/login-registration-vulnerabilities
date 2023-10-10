@@ -13,7 +13,7 @@
 <div class="user-data-display">
     <div class="profile-picture-form">
         <form asp-controller="ImgUpload" asp-action="Index" method="post" enctype="multipart/form-data">
-            <input class="form-control" name="user_upload" type="file" />
+            <input class="form-control" name="user_upload" type="file"  accept=".png"/>
             <button type="submit" value="Upload">Upload</button>
         </form>
     </div>
