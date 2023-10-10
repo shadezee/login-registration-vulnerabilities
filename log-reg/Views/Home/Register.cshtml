@@ -6,10 +6,10 @@
     </div>
 }
 
-@if (TempData.ContainsKey("PasswordLimitError"))
+@if (TempData.ContainsKey("PasswordError"))
 {
     <div class="alert alert-danger">
-        @TempData["PasswordLimitError"]
+        @TempData["PasswordError"]
     </div>
 }
 
