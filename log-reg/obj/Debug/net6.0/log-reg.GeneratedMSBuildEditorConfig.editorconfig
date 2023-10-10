@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = d:\ProgramFilesD\DOTNET\log-reg\log-reg
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/Alerts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGVydHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [d:/ProgramFilesD/DOTNET/log-reg/log-reg/Views/Home/DbStatus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYlN0YXR1cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

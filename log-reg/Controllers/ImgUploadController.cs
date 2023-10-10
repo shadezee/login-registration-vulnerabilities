@@ -25,7 +25,6 @@ namespace log_reg.Controllers
                 Console.WriteLine("Got File");
                 var file_type = Path.GetExtension(Path.GetFileName(user_upload.FileName));
                 var file_name = String.Concat(Convert.ToString(HttpContext.Session.GetString("UserId")), file_type);
-                // var file_name = String.Concat(Convert.ToString()), file_type);
                 Console.WriteLine("Got FileName");
 
                 var path = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profile_pics")).Root + $@"\{file_name}";

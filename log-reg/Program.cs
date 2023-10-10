@@ -13,17 +13,16 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.ExpireTimeSpan = TimeSpan.FromDays(20);
     options.SlidingExpiration = true;
 });
+
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = "shade_net";
     options.IdleTimeout = TimeSpan.FromMinutes(30);
 });
 
-
-
-string connection_string;
 string SelectDb()
 {
+    string connection_string;
     string local_connection = "Server=localhost;Database=CloudFive;Trusted_Connection=True;TrustServerCertificate=True;";
     string release_connection = "Server=10.0.0.5;Database=CloudFive;User Id=dotnetcloud;Password=Salamence4003;TrustServerCertificate=true";
 
@@ -46,10 +45,10 @@ string SelectDb()
     return connection_string;
 }
 
-
+string _connectionString = SelectDb();
 builder.Services.AddDbContext<UsersContext>(options =>
 {
-    options.UseSqlServer(SelectDb());
+    options.UseSqlServer(_connectionString);
 });
 
 var connectionString = builder.Configuration.GetConnectionString(SelectDb());
@@ -76,7 +75,6 @@ app.UseAuthorization();
 app.UseCookiePolicy();
 
 app.UseSession();
-
 
 app.MapControllerRoute(
     name: "default",

@@ -1,7 +1,9 @@
 ﻿@{
-    string id_for_profile = Model.Id.ToString(); // Convert to string explicitly
+    int id = @Model.Id;
+    string id_for_profile = Model.Id.ToString();
     string imageUrl = $"/profile_pics/{id_for_profile}.png";
 }
+
 @if (TempData.ContainsKey("UploadError"))
 {
     <div class="alert alert-danger">
@@ -17,7 +19,7 @@
     </div>
     <br>
     <div class="profile-data">
-        Hi @Model.Username, your ID is @Model.Id
+        Hi @Model.Username, your ID is @id
     </div>
     <div class="profile-picture-display">
         @if (@Model.HasProfileImage != 0)
@@ -26,14 +28,7 @@
         }
         else
         {
-            <p>Error in fetching image</p>
+            <p>Error in fetching image or image not set.</p>
         }
-    </div>
-
-    <div class="user-notes">
-        <form action="">
-            <input type="text" height="5100px" width="300px">
-            <button type="submit" value="Send">Send</button>
-        </form>
     </div>
 </div>
