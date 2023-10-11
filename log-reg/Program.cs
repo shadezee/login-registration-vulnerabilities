@@ -23,8 +23,8 @@ builder.Services.AddSession(options =>
 string SelectDb()
 {
     string connection_string;
-    string local_connection = "Server=localhost;Database=CloudFive;Trusted_Connection=True;TrustServerCertificate=True;";
-    string release_connection = "Server=10.0.0.5;Database=CloudFive;User Id=dotnetcloud;Password=Salamence4003;TrustServerCertificate=true";
+    string local_connection = "enter local connection string";
+    string release_connection = "enter hosted database connection string";
 
     try
     {
