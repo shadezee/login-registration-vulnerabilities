@@ -1,7 +1,4 @@
-﻿using Azure.Identity;
-using log_reg.Models;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 
 namespace log_reg.Controllers
@@ -24,7 +21,7 @@ namespace log_reg.Controllers
         public IActionResult Login(string username, string password)
         {
             // Get the connection string from the configuration file.
-            var connectionString = "Server=localhost;Database=CloudFive;Trusted_Connection=True;TrustServerCertificate=True;";
+            var connectionString = " local connection string";
 
             // Create a new SqlConnection object.
             using (var connection = new SqlConnection(connectionString))
